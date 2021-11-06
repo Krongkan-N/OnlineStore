@@ -1,0 +1,266 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Sarabun", sans-serif;
+}
+
+/* Header Style */
+
+/* Logo */
+.logo {
+  align-items: center;
+  font-weight: bolder;
+  font-size: large;
+}
+.logo-img {
+  width: 50px;
+}
+
+/* Navigation bar*/
+.navbar-brand {
+  font-size: 2rem;
+}
+.navbar {
+  width: screenwidth;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  background-color: #f6eabe;
+}
+.navbar li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar li a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.navbar li::after {
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #98ddca;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.navbar li:hover:after {
+  width: 100%;
+}
+
+/* Style site-body1*/
+.site-1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #fefbf3;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+.text-top-1 {
+  font-weight: bolder;
+  color: white;
+  background-color: #f05945;
+  margin: auto;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.card-body {
+  margin: auto;
+  width: auto;
+  font-weight: bolder;
+  padding-top: 20px;
+}
+
+.card-text {
+  font-size: 1.2rem;
+}
+
+.text-muted {
+  margin: auto;
+  font-weight: bolder;
+}
+
+/* Style Add cart button*/
+.buttons {
+  margin: auto;
+  padding-bottom: 10px;
+}
+.buttons button {
+  font-weight: bolder;
+  border-radius: 3px;
+  font-size: 17px;
+  border: 2px solid #d57e7e;
+  cursor: pointer;
+  background-color: #d57e7e;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.buttons button:hover {
+  color: black;
+  border: 2px solid #ffccd2;
+  background-color: #ffccd2;
+}
+
+/* Style site-footer*/
+.site-footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer-text {
+  padding-bottom: 0px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  color: #868686;
+}
+
+/* Social Media Icon */
+.icon {
+  display: flex;
+  justify-content: center;
+  margin: auto 25%;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.icon li {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  background-color: #eee;
+  margin: auto;
+  box-shadow: 3px 3px 10px #aeaeae, -4px -4px 10px white;
+  text-align: center;
+  line-height: 60px;
+  font-size: 50px;
+  color: #333;
+  cursor: pointer;
+  transition: 1s;
+  border-radius: 10px;
+}
+.icon li:nth-child(1):hover {
+  color: #eee;
+  border-radius: 50%;
+  background-color: #b5deff;
+}
+.icon li:nth-child(2):hover {
+  color: #eee;
+  border-radius: 50%;
+  background-color: #ffbcbc;
+}
+.icon li:nth-child(3):hover {
+  color: #eee;
+  border-radius: 50%;
+  background-color: #b5eaea;
+}
+.icon li:nth-child(4):hover {
+  color: #eee;
+  border-radius: 50%;
+  background-color: #cab8ff;
+}
+
+/* The whole for email part*/
+.form {
+  width: 55%;
+  position: relative;
+  height: 68px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  overflow: hidden;
+}
+.form input {
+  width: 100%;
+  height: 100%;
+  columns: #595f6e;
+  padding-top: 20px;
+  border: none;
+  outline: none;
+}
+.form label {
+  color: #868686;
+  font-weight: bolder;
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.form label::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  bottom: 0px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3.5px solid #5fa8d3;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.content-email {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+.form input:focus + .label-email .content-email,
+.form input:valid + .label-email .content-email {
+  transform: translateY(-150%);
+  font-size: 14px;
+  color: #5fa8d3;
+}
+.form input:focus + .label-email::after,
+.form input:valid + .label-email::after {
+  transform: translateX(0%);
+}
+
+/* Join Button*/
+.btn-3 {
+  letter-spacing: 3px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  font-weight: bolder;
+  width: 100px;
+  height: 40px;
+  border: none;
+  color: black;
+  background-color: #a6dcef;
+  border-radius: 5px;
+  transition: ease-out 0.3s;
+  font-size: 1.3rem;
+  outline: none;
+  margin: auto;
+}
+.btn-3:hover {
+  box-shadow: inset 200px 0 0 0 #82c4c3;
+  cursor: pointer;
+  color: white;
+}
+.contact-text {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: #868686;
+}
